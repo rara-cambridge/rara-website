@@ -88,16 +88,18 @@ export function createMap(
 
   // Add map controls
 
-  map.addControl(
-    new NavigationControl({
-      visualizePitch: true,
-      visualizeRoll: true,
-      showZoom: true,
-      showCompass: true,
-    })
-  );
+  if (config?.showControls !== false) {
+    map.addControl(
+      new NavigationControl({
+        visualizePitch: true,
+        visualizeRoll: true,
+        showZoom: true,
+        showCompass: true,
+      })
+    );
 
-  map.addControl(new FullscreenControl());
+    map.addControl(new FullscreenControl());
+  }
 
   map.addControl(new ScaleControl(), 'bottom-right');
 
@@ -142,9 +144,10 @@ export function createMap(
           overlay.geometry.coordinates,
           zOrder.getPosition(element.id),
           {
-            attribution: overlay.properties.attribution
-              ? attributions[overlay.properties.attribution]
-              : null,
+            attribution:
+              config?.showControls !== false && overlay.properties.attribution
+                ? attributions[overlay.properties.attribution]
+                : null,
             opacity: 1.0,
             visible: element.visible,
           }
