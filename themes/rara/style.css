@@ -137,3 +137,32 @@
 .rara-maps-content-tab.hidden {
   display: none;
 }
+
+#rara-maps-lib-root {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+#rara-maps-lib-root img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  transition: 0.5s;
+}
+
+#rara-maps-lib-root img.hidden {
+  opacity: 0;
+}
+
+.rara-maps-lib-banner {
+  position: absolute;
+  top: 20%;
+  width: 70%;
+  left: 15%;
+  z-index: 1000;
+  font-family: 'Open Sans', sans-serif;
+}

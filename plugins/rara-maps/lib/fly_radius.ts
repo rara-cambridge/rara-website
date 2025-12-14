@@ -6,7 +6,12 @@ import { LngLat, Map } from 'maplibre-gl';
 import { getTurf } from './externals';
 const turf = getTurf();
 
-export function flyRouteRadius(map: Map, center: Position, route: Array<Position>) {
+export function flyRouteRadius(
+  map: Map,
+  center: Position,
+  route: Array<Position>,
+  { autoStart = true } = {}
+) {
   let start: number = null;
   const playtime: number = 30000;
   const line: Feature<LineString> = turf.lineString(route);
@@ -45,7 +50,9 @@ export function flyRouteRadius(map: Map, center: Position, route: Array<Position
       )
     );
 
-    requestAnimationFrame(animate);
+    if (autoStart) {
+      requestAnimationFrame(animate);
+    }
   };
 
   animate();

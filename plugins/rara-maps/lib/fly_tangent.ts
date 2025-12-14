@@ -220,6 +220,6 @@ export class Route {
 /**
  * Fly along a route, with camera pointing along the tangent
  */
-export function flyRouteTangent(map: Map, route: Array<Position>) {
-  new Route(map, route, { autoStart: true });
+export function flyRouteTangent(map: Map, route: Array<Position>, { autoStart = true } = {}) {
+  new Route(map, route, { autoStart: autoStart });
 }

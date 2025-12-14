@@ -19,6 +19,7 @@ type Config = {
   center: [number, number];
   style: string;
   zoom: number;
+  [key: string]: unknown;
 };
 
 type Layer = {
