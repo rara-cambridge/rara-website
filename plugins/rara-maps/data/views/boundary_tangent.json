@@ -10,7 +10,8 @@
     "zoom": 15,
     "scrollZoom": false,
     "dragPan": false,
-    "dragRotate": false
+    "dragRotate": false,
+    "showControls": false
   },
   "layers": [
     {
