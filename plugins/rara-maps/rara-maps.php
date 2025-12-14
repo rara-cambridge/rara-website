@@ -39,7 +39,7 @@ function rara_maps_enqueue_script($rara_maps_type) {
 
     // Remove WP's printed tag for this handle by dequeuing just before footer prints,
     // then print our own module tag and inline data.
-    add_action( 'wp_print_footer_scripts', function() use ( $handle, $this_url, $ver ) {
+    add_action( 'wp_print_footer_scripts', function() use ( $bundle, $handle, $this_url, $ver ) {
         // Remove the handle's normal printed tag (so WP won't output its <script ...>)
         wp_dequeue_script( $handle );
         wp_deregister_script( $handle );
