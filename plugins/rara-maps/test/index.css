@@ -115,6 +115,11 @@ body {
   text-align: center;
 }
 
+.site-content {
+  display: flex;
+  flex-direction: column;
+}
+
 /*
   This has to be in the top-level CSS to ensure that content is hidden
   before the React app (and in particular its global.css) is loaded.
@@ -124,6 +129,18 @@ body {
 }
 
 #rara-maps-lib-root {
-  width: 800px;
-  height: 800px;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+#rara-maps-lib-root img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  z-index: 1000;
+  transition: 0.5s;
+}
+
+#rara-maps-lib-root img.hidden {
+  opacity: 0;
 }

@@ -24,7 +24,18 @@ async function loadMap() {
 
     const map = createMap(containerId, config, {});
 
-    flyRouteRadius(map, config.view.config.center, line.geometry.coordinates);
+    // 'idle' event indicates that all layers have been loaded
+    map.on('idle', () => {
+      // Hide placeholder image
+      const imgElem = document.querySelector('#rara-maps-lib-root img');
+      if (imgElem) {
+        imgElem.classList.add('hidden');
+      }
+
+      flyRouteRadius(map, config.view.config.center, line.geometry.coordinates, {
+        autoStart: true,
+      });
+    });
   } catch (err) {
     console.log(`Network error: ${err}`);
   }
