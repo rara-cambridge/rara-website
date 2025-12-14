@@ -1,0 +1,22 @@
+.panel {
+  z-index: 1000;
+  background-color: var(--colorBg);
+  color: var(--colorFg);
+  box-shadow: 8px 0px 15px rgba(0, 0, 0, 0.5);
+  border-radius: var(--panelRadius);
+}
+
+.button {
+  width: var(--buttonWidth);
+  height: var(--buttonWidth);
+  border: var(--colorFg) 1px solid;
+  border-radius: 50%;
+}
+
+.button.active {
+  background-color: var(--colorFg);
+}
+
+.button img {
+  width: 100%;
+}

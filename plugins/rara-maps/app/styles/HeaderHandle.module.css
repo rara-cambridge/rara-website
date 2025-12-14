@@ -1,0 +1,28 @@
+.handle {
+  position: fixed;
+  width: var(--headerHandleWidth);
+  height: var(--headerHandleHeight);
+  left: var(--headerHandleRadius);
+  top: var(--headerHeight);
+  transition: transform 0.3s ease;
+  border-radius: 0 0 var(--headerHandleRadius) var(--headerHandleRadius);
+  transform: translateY(0);
+  z-index: 1000;
+  background-color: var(--colorDarkBlue);
+  color: var(--colorWhite);
+}
+
+.headerClosed {
+  transform: translateY(calc(-1 * var(--headerHeight)));
+}
+
+.handle img {
+  width: calc(0.6 * var(--headerHandleWidth));
+  transform: rotate(0deg) translateX(calc(0.2 * var(--headerHandleWidth)))
+    translateY(calc(-0.6 * var(--headerHandleHeight)));
+}
+
+.handle.headerClosed img {
+  transform: rotate(180deg) translateX(calc(-0.2 * var(--headerHandleWidth)))
+    translateY(calc(0.6 * var(--headerHandleHeight)));
+}

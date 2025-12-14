@@ -1,0 +1,63 @@
+{
+  "id": "vector",
+  "app": {
+    "binding": "location"
+  },
+  "config": {
+    "style": "%{RARA_MAPS}/build/style.json",
+    "center": [0.144843, 52.212231],
+    "zoom": 15
+  },
+  "layers": [
+    {
+      "id": "3d_buildings",
+      "type": "buildings",
+      "visible": true
+    },
+    {
+      "id": "camantsoc_1836_1838",
+      "type": "overlay",
+      "visible": false
+    },
+    {
+      "id": "camantsoc_1910",
+      "type": "overlay",
+      "visible": false
+    },
+    {
+      "id": "camantsoc_1925",
+      "type": "overlay",
+      "visible": false
+    },
+    {
+      "id": "barnwell_priory",
+      "type": "overlay",
+      "visible": true
+    },
+    {
+      "id": "boundary",
+      "type": "line",
+      "color": "black",
+      "dashed": true,
+      "visible": true
+    },
+    {
+      "id": "heritage_trail",
+      "type": "line",
+      "color": "green",
+      "visible": true
+    },
+    {
+      "id": "attractions",
+      "type": "locations",
+      "color": "yellow",
+      "visible": true
+    },
+    {
+      "id": "improvements",
+      "type": "locations",
+      "color": "red",
+      "visible": true
+    }
+  ]
+}

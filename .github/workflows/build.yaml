@@ -1,0 +1,27 @@
+name: build
+
+on:
+  push:
+    branches: [ "dev", "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+      node-version: 24.7.0
+      WEBPACK_MINIFY: '1'
+
+    steps:
+    - uses: actions/checkout@v5
+    - name: Use Node.js ${{ env.node-version }}
+      uses: actions/setup-node@v6
+      with:
+        node-version: ${{ env.node-version }}
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build
+    - run: npm run lint
+    - run: npm run types
+    - run: ./scripts/deploy.sh origin deploy-${{ env.BRANCH_NAME }} --push

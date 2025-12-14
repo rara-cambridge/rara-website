@@ -1,0 +1,129 @@
+:root {
+  --colorDarkBlue: #364154;
+  --colorGreen: #0f0;
+  --colorWhite: #fff;
+}
+
+html,
+body {
+  --headerHeight: 50px;
+  --footerHeight: 150px;
+
+  height: 100%;
+  margin: 0;
+
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: var(--headerHeight);
+  box-sizing: border-box;
+  z-index: 999;
+  top: 0;
+  transition: transform 0.3s ease;
+  color: var(--colorWhite);
+  background-color: var(--colorDarkBlue);
+  transform: translateY(0);
+}
+
+.site-header.hidden {
+  transform: translateY(-100%);
+}
+
+.site-header div {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.site-content {
+  display: flex;
+  --headerOffset: var(--headerHeight);
+  flex-grow: 1;
+  padding-top: var(--headerOffset);
+  transition: padding-top ease 0.3s;
+}
+
+.site-header.hidden + .site-content {
+  --headerOffset: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#toolbar {
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.toolbar a {
+  font-size: large;
+  background-color: transparent;
+  color: var(--colorWhite);
+  text-decoration: none;
+  padding-left: 1em;
+  padding-right: 1em;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+.toolbar a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.toolbar a.active {
+  background-color: var(--color-blue);
+  color: #fff;
+}
+
+.site-footer {
+  border-top: var(--colorWhite) 1px solid;
+  height: var(--footerHeight);
+  padding: 0 1rem;
+  box-sizing: border-box;
+  color: var(--colorWhite);
+  background: var(--colorDarkBlue);
+  display: flex;
+
+  /* Ensure it appears on top of map, in no-panel views */
+  z-index: 999;
+}
+
+.site-footer.hidden {
+  display: none;
+}
+
+.site-footer div {
+  flex-grow: 1;
+  text-align: center;
+}
+
+/*
+  This has to be in the top-level CSS to ensure that content is hidden
+  before the React app (and in particular its global.css) is loaded.
+*/
+.rara-maps-content-tab.hidden {
+  display: none;
+}
+
+#rara-maps-lib-root {
+  width: 800px;
+  height: 800px;
+}

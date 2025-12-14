@@ -1,0 +1,81 @@
+.panel {
+  position: fixed;
+  height: var(--panelHeight);
+  left: 0;
+  right: 0;
+  top: calc(100vh - var(--dashboardHeight));
+  border-top: var(--colorFg) 1px solid;
+  border-radius: var(--panelRadius) var(--panelRadius) 0 0;
+  box-shadow: 8px 0px 15px rgba(0, 0, 0, 0.5);
+
+  /* background-color: red; */
+}
+
+.panelBody {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.dashboard {
+  left: 0;
+  right: 0;
+  height: var(--dashboardHeight);
+  border-radius: var(--panelRadius) var(--panelRadius) 0 0;
+  border-bottom: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.handle {
+  min-height: var(--panelHandleHeight);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: ns-resize;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+  border-radius: var(--panelRadius) var(--panelRadius) 0 0;
+}
+
+.handleDot {
+  width: 36px;
+  height: 4px;
+  border-radius: 2px;
+  background: #ccc;
+}
+
+.titleContainer {
+  flex-grow: 1;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonGroupContainer {
+  width: calc(2 * var(--buttonWidth) + 3 * var(--buttonMargin));
+  height: 100%;
+  display: flex;
+}
+
+.buttonContainer {
+  width: calc(var(--buttonWidth) + var(--buttonMargin));
+}
+
+.left {
+  display: flex;
+  justify-content: flex-start; /* align from left */
+  gap: var(--buttonMargin); /* horizontal space between items */
+  padding: var(--buttonMargin) 0; /* top/bottom spacing */
+  padding-left: var(--buttonMargin); /* gap from left edge */
+}
+
+.right {
+  display: flex;
+  flex-direction: row-reverse; /* items fill from right edge */
+  justify-content: flex-start; /* start = right because of reverse */
+  gap: var(--buttonMargin); /* gap between items */
+  padding: var(--buttonMargin) 0; /* top/bottom spacing */
+  padding-right: var(--buttonMargin); /* gap from right edge */
+}

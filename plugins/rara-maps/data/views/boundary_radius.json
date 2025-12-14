@@ -1,0 +1,58 @@
+{
+  "id": "boundary_radius",
+  "app": {
+    "auto": "fly_radius",
+    "route": "boundary_smooth"
+  },
+  "config": {
+    "style": "%{RARA_MAPS}/build/style.json",
+    "center": [0.14547600132800653, 52.212610097321885],
+    "zoom": 15
+  },
+  "layers": [
+    {
+      "id": "3d_buildings",
+      "type": "buildings",
+      "visible": true
+    },
+    {
+      "id": "camantsoc_1836_1838",
+      "type": "overlay",
+      "visible": false
+    },
+    {
+      "id": "camantsoc_1910",
+      "type": "overlay",
+      "visible": false
+    },
+    {
+      "id": "camantsoc_1925",
+      "type": "overlay",
+      "visible": false
+    },
+    {
+      "id": "barnwell_priory",
+      "type": "overlay",
+      "visible": false
+    },
+    {
+      "id": "boundary_smooth",
+      "type": "line",
+      "color": "black",
+      "dashed": true,
+      "visible": true
+    },
+    {
+      "id": "attractions",
+      "type": "locations",
+      "color": "yellow",
+      "visible": true
+    },
+    {
+      "id": "improvements",
+      "type": "locations",
+      "color": "red",
+      "visible": true
+    }
+  ]
+}

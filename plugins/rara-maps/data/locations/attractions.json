@@ -1,0 +1,152 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "id": "attractions",
+    "title": "Local attractions"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "stourbridge_common",
+        "title": "Stourbridge Common"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.150095, 52.217236]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "st_andrew_the_less",
+        "title": "St Andrew the Less"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.139667, 52.208968]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "leper_chapel",
+        "title": "Leper Chapel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.152569, 52.21392]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cellarers_chequer",
+        "title": "Cellarer's Chequer"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.139045, 52.209589]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "abbey_house",
+        "title": "Abbey House"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.138523, 52.209092]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cmot",
+        "title": "Cambridge Museum of Technology"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.14366, 52.212458]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "emailerator",
+        "title": "Dinky Doors Emailerator"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.138785, 52.210923]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "war_memorial",
+        "title": "Cambridge Gas Company War Memorial"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.144123, 52.210016]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "flying_saucer",
+        "title": "Dinky Doors Flying Saucer"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.142605, 52.212513]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "equiano_bridge",
+        "title": "Equiano Bridge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.142986, 52.213628]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "engineers_house",
+        "title": "Engineer's House"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.142851, 52.212454]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "kerb_kollective",
+        "title": "Kerb Kollective"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.143076, 52.212559]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "logans_meadow",
+        "title": "Logan's Meadow Nature Reserve"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.141562, 52.213629]
+      }
+    }
+  ]
+}

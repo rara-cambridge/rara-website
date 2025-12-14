@@ -1,0 +1,31 @@
+{
+  "id": "improvements",
+  "app": {
+    "binding": "location"
+  },
+  "config": {
+    "style": "%{RARA_MAPS}/build/style.json",
+    "center": [0.144843, 52.212231],
+    "zoom": 15
+  },
+  "layers": [
+    {
+      "id": "3d_buildings",
+      "type": "buildings",
+      "visible": true
+    },
+    {
+      "id": "boundary",
+      "type": "line",
+      "color": "black",
+      "dashed": true,
+      "visible": true
+    },
+    {
+      "id": "improvements",
+      "type": "locations",
+      "color": "yellow",
+      "visible": true
+    }
+  ]
+}

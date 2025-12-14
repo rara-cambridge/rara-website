@@ -1,0 +1,56 @@
+:root {
+  --colorDarkBlue: #364154;
+  --colorGreen: #0f0;
+  --colorWhite: #fff;
+
+  --colorBg: var(--colorWhite);
+  --colorFg: var(--colorDarkBlue);
+
+  --headerOffset: var(--headerHeight);
+
+  --headerHandleHeight: 20px;
+  --headerHandleWidth: 60px;
+  --headerHandleRadius: 10px;
+
+  --dashboardHeight: 70px;
+
+  --buttonWidth: 40px;
+  --buttonMargin: 5px;
+
+  --panelHeight: 100vh;
+  --panelRadius: 15px;
+  --panelHandleHeight: 25px;
+  --panelModalMargin: 20px;
+
+  --footerHeight: 150px;
+
+  font-size: 12px;
+}
+
+/*
+:focus-visible {
+  outline: 0;
+  outline: 5px solid red;
+}
+*/
+
+.rara-maps-wp-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+#rara-maps-app-root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.maplibregl-popup-content {
+  border-radius: var(--panelRadius);
+  border: 1px solid var(--colorFg);
+  box-shadow: 8px 0px 15px rgba(0, 0, 0, 0.5);
+}

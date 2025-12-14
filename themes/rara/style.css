@@ -1,0 +1,139 @@
+/**
+ * Theme Name:        Riverside Area Residents' Association
+ * Template:          astra
+ * Version:           1.0.0
+ * Author:            gareth.stockwell@gmail.com
+ * Author URI:        https://example.com
+ * Tags:              block-patterns, full-site-editing
+ * Text Domain:       rara
+ * Domain Path:       /assets/lang
+ * Tested up to:      6.8
+ * Requires at least: 6.8
+ * Requires PHP:      7.4
+ * License:           MIT License
+ * License URI:       https://opensource.org/license/mit
+ */
+
+/* Astra sticky header */
+
+.ast-theme-transparent-header #masthead {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  transition: 0.5s ease;
+}
+
+/* Fix content padding */
+
+.site-content {
+  padding-top: 95px;
+}
+
+.site-main {
+  margin-top: 30px;
+}
+
+@media (max-width: 800px) {
+  .site-content {
+    padding-top: 175px;
+  }
+}
+
+@media (max-width: 650px) {
+  .site-content {
+    padding-top: 100px;
+  }
+}
+
+/* Fix text colour in footer */
+
+.site-footer {
+  color: var(--ast-global-color-7);
+}
+
+.site-footer a {
+  color: var(--ast-global-color-7);
+}
+
+.site-footer a:hover {
+  color: white;
+}
+
+.site-footer .wp-block-heading {
+  color: var(--ast-global-color-7);
+}
+
+/* Reduce height of footer */
+
+.site-primary-footer-wrap {
+  padding-bottom: 0px;
+}
+
+.site-below-footer-wrap {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+/*
+ * Highlight target when scrolled to
+ * Adapted from https://codepen.io/anon/pen/xfjrh
+ */
+
+:target {
+  -webkit-animation: target-fade 3s;
+  -moz-animation: target-fade 3s;
+  -o-animation: target-fade 3s;
+  animation: target-fade 3s;
+}
+
+@-webkit-keyframes target-fade {
+  from {
+    background-color: var(--ast-global-color-0);
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+@-moz-keyframes target-fade {
+  from {
+    background-color: var(--ast-global-color-0);
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+@-o-keyframes target-fade {
+  from {
+    background-color: var(--ast-global-color-0);
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+@keyframes target-fade {
+  from {
+    background-color: var(--ast-global-color-0);
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+/* Tweak layout of post date in "Local issues" page */
+
+.page-id-17 .wp-block-latest-posts__post-date {
+  display: inline;
+  font-style: italic;
+  margin-left: 20px;
+}
+
+/*
+  This has to be in the top-level CSS to ensure that content is hidden
+  before the React app (and in particular its global.css) is loaded.
+*/
+.rara-maps-content-tab.hidden {
+  display: none;
+}

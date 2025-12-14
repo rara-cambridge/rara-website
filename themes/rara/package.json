@@ -1,0 +1,10 @@
+{
+  "name": "rara",
+  "version": "1.0.0",
+  "description": "RARA WordPress theme",
+  "license": "MIT",
+  "author": "gareth.stockwell@gmail.com",
+  "scripts": {
+    "zip": "cd .. && zip -r rara/rara.zip rara -x '*.zip' rara/package.json"
+  }
+}

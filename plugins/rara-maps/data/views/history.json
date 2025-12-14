@@ -1,0 +1,47 @@
+{
+  "id": "history",
+  "app": {
+    "binding": "overlay"
+  },
+  "config": {
+    "style": "%{RARA_MAPS}/build/style.json",
+    "center": [0.144843, 52.212231],
+    "zoom": 15
+  },
+  "layers": [
+    {
+      "id": "camantsoc_1836_1838",
+      "type": "overlay",
+      "visible": false
+    },
+    {
+      "id": "camantsoc_1910",
+      "type": "overlay",
+      "visible": false
+    },
+    {
+      "id": "camantsoc_1925",
+      "type": "overlay",
+      "visible": false
+    },
+    {
+      "id": "barnwell_priory",
+      "type": "overlay",
+      "visible": false
+    },
+    {
+      "id": "boundary",
+      "type": "line",
+      "color": "black",
+      "dashed": true,
+      "visible": true
+    },
+    {
+      "id": "attractions",
+      "title": "Modern day locations",
+      "type": "locations",
+      "color": "yellow",
+      "visible": false
+    }
+  ]
+}

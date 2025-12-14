@@ -1,0 +1,51 @@
+{
+  "name": "rara-website",
+  "version": "1.0.0",
+  "description": "RARA website",
+  "homepage": "https://github.com/garethstockwell/rara-website#readme",
+  "bugs": {
+    "url": "https://github.com/garethstockwell/rara-website/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garethstockwell/rara-website.git"
+  },
+  "license": "MIT",
+  "author": "gareth.stockwell@gmail.com",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "all": "npm run --ws --if-present",
+    "build": "npm run all build",
+    "format": "prettier --check '**/*.{js,jsx,ts,tsx,json,css,md}'",
+    "format:fix": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,md}'",
+    "lint": "npm run all lint",
+    "lint:fix": "npm run all lint:fix",
+    "open": "npm run -w plugins/rara-maps open",
+    "start": "npm run all serve",
+    "start": "npm run all start",
+    "types": "npm run all types"
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1",
+    "http-server": "^14.1.1",
+    "rara-maps": "^1.0.0"
+  },
+  "workspaces": [
+    "plugins/rara-maps",
+    "themes/rara"
+  ],
+  "pre-commit": [
+    "format",
+    "lint"
+  ],
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.3",
+    "@eslint/js": "^9.39.1",
+    "@typescript-eslint/eslint-plugin": "^8.48.1",
+    "@typescript-eslint/parser": "^8.48.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.7.4"
+  }
+}

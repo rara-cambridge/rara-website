@@ -1,0 +1,44 @@
+{
+  "id": "heritage_trail",
+  "app": {
+    "binding": "location",
+    "route": "heritage_trail"
+  },
+  "config": {
+    "style": "%{RARA_MAPS}/build/style.json",
+    "center": [0.144843, 52.212231],
+    "zoom": 15
+  },
+  "layers": [
+    {
+      "id": "3d_buildings",
+      "type": "buildings",
+      "visible": true
+    },
+    {
+      "id": "boundary",
+      "type": "line",
+      "color": "black",
+      "dashed": true,
+      "visible": true
+    },
+    {
+      "id": "heritage_trail",
+      "type": "line",
+      "color": "green",
+      "visible": true
+    },
+    {
+      "id": "attractions",
+      "type": "locations",
+      "color": "yellow",
+      "visible": true
+    },
+    {
+      "id": "point",
+      "type": "point",
+      "color": "red",
+      "visible": true
+    }
+  ]
+}
